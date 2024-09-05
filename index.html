@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+        body {
+            background: linear-gradient(to top, #1a6350, #000000);
+            height: 100vh;
+            margin: 0; 
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        .rand {
+            font-size: 100px;
+            color: white;
+            font-family: 'Noto Sans';
+        }
+    </style>
+</head>
+
+<body>
+    <div class="rand" id="rand"></div>
+
+    <script>
+        const rand = [':-)', ':3', 'AAAAAAA', 'Yes', 'Cat', '0%', 'More Cats'];
+        function getRandomQuote() {
+            const randomIndex = Math.floor(Math.random() * rand.length);
+            return rand[randomIndex];
+        }
+
+        document.getElementById('rand').textContent = getRandomQuote();
+    </script>
+</body>
+</html>
